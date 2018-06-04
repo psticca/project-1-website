@@ -23,11 +23,7 @@ www.speclagaming.com {
     header / {
        Strict-Transport-Security "max-age=31536000;"
     }
-    proxy / localhost:3000 {
-        keepalive 65
-        websocket
-        transparent
-    }
+    root /home/ubuntu/website
     tls peter_sticca@hotmail.com {
         max_certs 1
     }

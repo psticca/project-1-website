@@ -1,0 +1,40 @@
+// ALLLOW CADDY TO BIND TO PORTS
+sudo setcap cap_net_bind_service=+ep $(which caddy)
+
+// SOME OPEN FILE LIMIT THING
+ulimit -n 8192
+
+// SEE ALL PROCESS
+ps -a
+
+// START AS PROCESS
+sudo nohup caddy -conf caddyfile --agree &
+
+// GET PID
+pgrep caddy
+
+// KILL CADDY
+sudo kill -QUIT 12990
+
+// GRACEFUL RELOAD
+sudo kill -USR1 13832
+
+// VALIDATE
+sudo caddy -validate -conf caddyfile -ca https://acme-staging.api.letsencrypt.org/directory --agree
+
+// TEST
+sudo caddy -conf caddyfile -ca https://acme-staging.api.letsencrypt.org/directory --agree
+
+// REAL
+sudo caddy -conf caddyfile --agree
+
+// START AS PROCESS
+sudo nohup caddy -conf caddyfile --agree &
+
+ssh -i "~/.ssh/PetersBeastKey.pem" ubuntu@ec2-54-66-254-67.ap-southeast-2.compute.amazonaws.com
+
+# PUSH FILES
+git add . && git commit -m "message" && git push origin master
+
+# SYNC FILES
+sudo git pull
