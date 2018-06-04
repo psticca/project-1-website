@@ -1,0 +1,4 @@
+speclagaming.com:80 {
+    root /home/ubuntu/website
+    tls off
+}
