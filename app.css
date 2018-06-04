@@ -1,0 +1,95 @@
+body {
+  background: black;
+}
+
+.header {
+    background: white;
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-links {
+  display: flex;
+  flex-direction: row;
+}
+
+.header-links a {
+  padding: 15px;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #ff0800;
+  transition: 0.1s all;
+}
+
+.header-links a:hover {
+  border-bottom: 2px solid #ff0800;
+}
+
+.header-links a.active {
+  border-bottom: 2px solid #ff0800;
+}
+
+.header h1 {
+  font-size: 30px;
+  font-bold: 500;
+}
+
+.content {
+  background-color: black;
+  padding: 60px 0;
+}
+
+.title-image {
+  border-top: 4px solid white;
+  background: url("./header-image.jpg") no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 300px;
+}
+
+.title {
+  margin-top: 40px;
+  background-color: #ff0800;
+  color: white;
+  padding: 30px 40px;
+}
+
+.title h2 {
+  font-size: 36px;
+}
+
+.paragraph-content {
+  padding: 30px 40px;
+  max-width: 780px;
+}
+
+.paragraph-content p {
+  font-size: 22px;
+  line-height: 30px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.paragraph-content ul {
+  list-style: circle;
+  padding-left: 30px;
+}
+
+.paragraph-content li {
+  font-size: 22px;
+  line-height: 30px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.paragraph-content iframe {
+  margin-bottom: 40px;
+}
+
+.big-text {
+  font-size: 30px !important;
+  line-height: 45px !important;
+}
