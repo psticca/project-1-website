@@ -1,6 +1,39 @@
 speclagaming.com:80 {
-    root /home/ubuntu/website
+    redir 301 {
+         /  https://www.speclagaming.com{uri}
+    }
     tls off
+}
+
+speclagaming.com {
+  redir 301 {
+       /  https://www.speclagaming.com{uri}
+  }
+  tls off
+}
+
+www.speclagaming.com:80 {
+    redir 301 {
+        /  https://www.speclagaming.com{uri}
+    }
+    tls off
+}
+
+www.speclagaming.com {
+    header / {
+       Strict-Transport-Security "max-age=31536000;"
+    }
+    proxy / localhost:3000 {
+        keepalive 65
+        websocket
+        transparent
+    }
+    tls peter_sticca@hotmail.com {
+        max_certs 1
+    }
+    gzip
+    log
+    errors
 }
 
 54.66.254.67:80 {
